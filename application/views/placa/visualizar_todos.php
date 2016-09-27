@@ -14,30 +14,30 @@
 			    	</tr>
 			    </thead>
 			    <tbody>
-			    	<?php 
+			    	<?php
 			    		if($placas){
-			    			foreach ($placas as $placa) { 
+			    			foreach ($placas as $placa) {
 			    	?>
-			    		
+
 						<tr>
-							<td> <img src="<?php echo base_url("assets/uploads/placas/".$placa["nome_imagem"] ); ?>" alt="" class="img-responsive"> </td>
+							<td> <img class="placa" src="<?php echo base_url("assets/uploads/placas/".$placa["nome_imagem"] ); ?>" alt="" class="img-responsive"> </td>
 							<td> <?php echo $placa["nome_placa"]; ?> </td>
 							<td> <?php echo $placa["descricao_placa"]; ?> </td>
-							<td><a class="btn btn-default" href=" <?php echo base_url('placa/editar/'.$placa["codigo_placa"]); ?>"><i class="glyphicon glyphicon-pencil"></i></a> 
+							<td><a class="btn btn-default" href=" <?php echo base_url('placa/editar/'.$placa["codigo_placa"]); ?>"><i class="glyphicon glyphicon-pencil"></i></a>
 								<a class="btn btn-danger" href="<?php echo base_url('placa/deletar/'. $placa["codigo_placa"]); ?>" onclick="return confirm('Deseja deletar este placa?'); "><i class="glyphicon glyphicon-trash"></i></a></td>
 
 						</tr>
 
-			    	<?php 
+			    	<?php
 			    		  } //end foreach
 			    		} else {
-			    	 ?> 
+			    	 ?>
 
 			    	 <tr>
 			    	 	<td colspan="3" class="text-center">Não há placas cadastradas.</td>
 			    	 </tr>
 
-			    	 <?php 
+			    	 <?php
 			    	 	} //end if
 			    	 ?>
 			    </tbody>
@@ -45,5 +45,3 @@
 			</div>
 		</div>
 	</div>
-    
-
